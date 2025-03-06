@@ -21,7 +21,7 @@ namespace pdkmMenu
             ToolTipsMod.UpdateMod();
             NoClipMod.UpdateMod();
             FreeCamMod.UpdateMod();
-            HearAllMod.UpdateMod();
+            //HearAllMod.UpdateMod();
             UserNameBillboardMod.UpdateMod();
             SpeedHackMod.UpdateMod();
         }

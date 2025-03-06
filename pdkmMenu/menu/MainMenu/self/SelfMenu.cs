@@ -55,7 +55,7 @@ public class SelfMenu : MonoBehaviour
         selfMenuGUI.AddButton("NoClip", () => { NoClipMod.IsNoClip = !NoClipMod.IsNoClip; }, NoClipMod.IsNoClip);
         selfMenuGUI.AddButton("FreeCam", () => { FreeCamMod.IsFreeCam = !FreeCamMod.IsFreeCam; }, FreeCamMod.IsFreeCam);
 
-        selfMenuGUI.AddButton("HearAll", () => { selfConfig.ToggleConfigEntry(selfConfig.HearAll); }, selfConfig.HearAll.Value);
+        //selfMenuGUI.AddButton("HearAll", () => { selfConfig.ToggleConfigEntry(selfConfig.HearAll); }, selfConfig.HearAll.Value);
 
         selfMenuGUI.AddButton("Teleport to entrance", () => { TeleportMod.TeleportToEntrance(); });
         selfMenuGUI.AddButton("Teleport to ship", () => { TeleportMod.TeleportToShip(); });

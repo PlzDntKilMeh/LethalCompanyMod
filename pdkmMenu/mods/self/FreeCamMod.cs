@@ -11,7 +11,7 @@ namespace pdkmMenu
 
         private static GameObject FreeCamHolder = null;
         public static Camera FreeCamera = null;
-        private static AudioListener ears;
+        //private static AudioListener ears;
         private static Vector3 rotateValue = Vector3.zero;
         public static bool _isFreeCam = false;
 
@@ -74,12 +74,12 @@ namespace pdkmMenu
             if (FreeCamera == null)
             {
                 FreeCamera = FreeCamHolder.AddComponent<Camera>();
-                ears = FreeCamHolder.AddComponent<AudioListener>();
+                //ears = FreeCamHolder.AddComponent<AudioListener>();
 
-                if (ears == null)
-                    Plugin.Logger.LogWarning("Failed to add AudioListener!");
+                //if (ears == null)
+                //    Plugin.Logger.LogWarning("Failed to add AudioListener!");
 
-                ears.enabled = false;
+                //ears.enabled = false;
                 FreeCamera.enabled = false;
             }
 
@@ -149,10 +149,10 @@ namespace pdkmMenu
 
             MyCharacterController.enabled = false;
 
-            if (player.activeAudioListener != null)
-                player.activeAudioListener.enabled = false;
-            else
-                Plugin.Logger.LogWarning("activeAudioListener is null!");
+            //if (player.activeAudioListener != null)
+            //    player.activeAudioListener.enabled = false;
+            //else
+            //    Plugin.Logger.LogWarning("activeAudioListener is null!");
 
             if (FreeCamera != null)
             {
@@ -165,23 +165,23 @@ namespace pdkmMenu
                 Plugin.Logger.LogError("FreeCamera is null! Cannot enable FreeCam.");
             }
 
-            if (ears != null)
-                ears.enabled = true;
-            else
-                Plugin.Logger.LogWarning("ears (AudioListener) is null!");
+            //if (ears != null)
+            //    ears.enabled = true;
+            //else
+            //    Plugin.Logger.LogWarning("ears (AudioListener) is null!");
         }
 
         public static void DisableFreeCam()
         {
             var player = GameNetworkManager.Instance?.localPlayerController;
-            if (player != null && player.activeAudioListener != null)
-            {
-                player.activeAudioListener.enabled = true;
-            }
-            else
-            {
-                Plugin.Logger.LogWarning("Player or activeAudioListener is null! Cannot restore audio listener.");
-            }
+            //if (player != null && player.activeAudioListener != null)
+            //{
+            //    player.activeAudioListener.enabled = true;
+            //}
+            //else
+            //{
+            //    Plugin.Logger.LogWarning("Player or activeAudioListener is null! Cannot restore audio listener.");
+            //}
 
             if (MyCharacterController == null)
             {
@@ -197,10 +197,10 @@ namespace pdkmMenu
             else
                 Plugin.Logger.LogWarning("FreeCamera is null!");
 
-            if (ears != null)
-                ears.enabled = false;
-            else
-                Plugin.Logger.LogWarning("ears (AudioListener) is null!");
+            //if (ears != null)
+            //    ears.enabled = false;
+            //else
+            //    Plugin.Logger.LogWarning("ears (AudioListener) is null!");
         }
     }
 }
